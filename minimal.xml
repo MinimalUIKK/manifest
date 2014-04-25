@@ -2,6 +2,8 @@
 <manifest>
 <remote name="minimal" fetch="https://github.com/MinimalUI/" />
     <project path="device/lge/hammerhead" name="android_device_lge_hammerhead" remote="minimal" revision="master" />
+    <project path="device/asus/grouper" name="android_device_asus_grouper" remote="minimal" revision="master" />
+    <project path="device/asus/tilapia" name="android_device_asus_tilapia" remote="minimal" revision="master" />
     <project path="vendor/rascarlo" name="android_vendor_minimal" remote="minimal" revision="master" />
     <project path="frameworks/base" name="android_frameworks_base" remote="minimal" revision="master" />
     <project path="frameworks/av" name="android_frameworks_av" remote="minimal" revision="master" />
