@@ -1,7 +1,7 @@
 Crear directorio para alojar el código:
 
-	mkdir MinimalUI
-	cd MinimalUI
+    mkdir MinimalUI
+    cd MinimalUI
 
 Iniciar repositorio para descargar el código:
 
@@ -16,3 +16,13 @@ Después, para descargar el local_manifest, utiliza estos dos comandos:
 Comenzar la descarga de código:
 
     repo sync -f
+
+Compilar:
+
+    source build/envsetup.sh
+
+    lunch
+
+    <seleccionas tu dispositivo>
+
+    make otapackage -jX (X = número de núcleos de tu ordenador)
