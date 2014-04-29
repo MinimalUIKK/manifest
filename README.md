@@ -43,12 +43,26 @@ Comenzar la descarga de código:
 
     repo sync -f
 
-Compilar:
+Por último, para compilar:
 
-    source build/envsetup.sh
+*Nexus 5 - hammerhead:
 
-    lunch
+    source build/hammerhead.sh
 
-    <seleccionas tu dispositivo>
+*Nexus 4 - mako:
 
-    make otapackage -jX (X = número de núcleos de tu ordenador)
+    source build/mako.sh
+
+*Nexus 7 - tilapia:
+
+    source build/tilapia.sh
+
+*Nexus 7 - grouper:
+
+    source build/grouper.sh
+
+*Nexus 10 - manta:
+
+    source build/manta.sh
+
+*Más dispositivos disponibles para compilar en un futuro cercano
