@@ -10,6 +10,7 @@
     <project path="device/samsung/manta" name="android_device_samsung_manta" remote="minimal" revision="master" />
     <project path="vendor/rascarlo" name="android_vendor_minimal" remote="minimal" revision="master" />
     <project path="frameworks/base" name="android_frameworks_base" remote="minimal" revision="master" />
+    <project path="frameworks/native" name="android_frameworks_native" remote="minimal" revision="master" />
     <project path="frameworks/av" name="android_frameworks_av" remote="minimal" revision="master" />
     <project path="packages/apps/Browser" name="android_packages_apps_Browser" remote="minimal" revision="master" />
     <project path="packages/apps/Calculator" name="android_packages_apps_Calculator" remote="minimal" revision="master" />
