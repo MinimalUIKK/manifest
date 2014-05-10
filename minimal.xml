@@ -2,6 +2,7 @@
 <manifest>
 <remote name="minimal" fetch="https://github.com/MinimalUI/" />
 <remote name="drivers" fetch="https://github.com/SlimRoms/" />
+<remote name="fix" fetch="https://github.com/DavidVazGuijarro/" />
     <project path="device/lge/hammerhead" name="android_device_lge_hammerhead" remote="minimal" revision="master" />
     <project path="device/lge/mako" name="android_device_lge_mako" remote="minimal" revision="master" />
     <project path="device/asus/grouper" name="android_device_asus_grouper" remote="minimal" revision="master" />
@@ -37,7 +38,7 @@
     <project path="vendor/sony" name="proprietary_vendor_sony" remote="drivers" revision="kk4.4" />
     <project path="vendor/asus" name="proprietary_vendor_asus" remote="drivers" revision="kk4.4" />
     <project path="vendor/widevine" name="proprietary_vendor_widevine" remote="drivers" revision="kk4.4" />
-    <project path="vendor/qcom" name="proprietary_vendor_qcom" remote="drivers" revision="kk4.4" />
+    <project path="vendor/qcom" name="proprietary_vendor_qcom" remote="fix" revision="kk4.4" />
     <project path="vendor/invensense" name="proprietary_vendor_invensense" remote="drivers" revision="kk4.4" />
     <project path="vendor/nvidia" name="proprietary_vendor_nvidia" remote="drivers" revision="kk4.4" />
     <project path="vendor/broadcom" name="proprietary_vendor_broadcom" remote="drivers" revision="kk4.4" />
