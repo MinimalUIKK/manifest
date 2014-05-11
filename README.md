@@ -4,7 +4,7 @@ Instalar paquetes necesarios para el entorno de compilación:
     zip curl libc6-dev libncurses5-dev:i386 x11proto-core-dev \
     libx11-dev:i386 libreadline6-dev:i386 libgl1-mesa-glx:i386 \
     libgl1-mesa-dev g++-multilib mingw32 tofrodos \
-    python-markdown libxml2-utils xsltproc zlib1g-dev:i386
+    python-markdown libxml2-utils xsltproc zlib1g-dev:i386 dpkg-dev
     
 Hacer link de librerías para evitar errores:
 
