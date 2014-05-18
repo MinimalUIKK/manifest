@@ -5,7 +5,7 @@
   <remote name="minimal" fetch="https://github.com/MinimalUI/" />
   <remote name="cm" fetch="https://github.com/CyanogenMod/" />
   <remote name="drivers" fetch="https://github.com/SlimRoms/" />
-  <remote name="fix" fetch="https://github.com/DavidVazGuijarro/" />
+  <remote name="vaz" fetch="https://github.com/DavidVazGuijarro/" />
   <remote  name="github" fetch="git://github.com/" />
   <default revision="refs/tags/android-4.4.2_r2" remote="aosp" sync-j="20" />
 
@@ -13,7 +13,6 @@
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
-  <project path="art" name="platform/art" />
   <project path="bionic" name="platform/bionic" groups="pdk" />
   <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" />
   <project path="bootable/diskinstaller" name="platform/bootable/diskinstaller" />
@@ -53,7 +52,6 @@
   <project path="external/arduino" name="platform/external/arduino" />
   <project path="external/bison" name="platform/external/bison" groups="pdk" />
   <project path="external/blktrace" name="platform/external/blktrace" />
-  <project path="external/bluetooth/bluedroid" name="platform/external/bluetooth/bluedroid" groups="pdk" />
   <project path="external/bouncycastle" name="platform/external/bouncycastle" />
   <project path="external/bsdiff" name="platform/external/bsdiff" groups="pdk" />
   <project path="external/bzip2" name="platform/external/bzip2" groups="pdk" />
@@ -266,8 +264,6 @@
   <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="pdk" />
   <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom" />
   <project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" groups="qcom" />
-  <project path="hardware/qcom/camera" name="platform/hardware/qcom/camera" groups="qcom" />
-  <project path="hardware/qcom/display" name="platform/hardware/qcom/display" groups="qcom" />
   <project path="hardware/qcom/keymaster" name="platform/hardware/qcom/keymaster" groups="qcom" />
   <project path="hardware/qcom/media" name="platform/hardware/qcom/media" groups="qcom" />
   <project path="hardware/qcom/msm8960" name="platform/hardware/qcom/msm8960" groups="qcom_msm8960" />
@@ -438,7 +434,7 @@
   <project path="vendor/sony" name="proprietary_vendor_sony" remote="drivers" revision="kk4.4" />
   <project path="vendor/asus" name="proprietary_vendor_asus" remote="drivers" revision="kk4.4" />
   <project path="vendor/widevine" name="proprietary_vendor_widevine" remote="drivers" revision="kk4.4" />
-  <project path="vendor/qcom" name="proprietary_vendor_qcom" remote="fix" revision="kk4.4" />
+  <project path="vendor/qcom" name="proprietary_vendor_qcom" remote="vaz" revision="kk4.4" />
   <project path="vendor/invensense" name="proprietary_vendor_invensense" remote="drivers" revision="kk4.4" />
   <project path="vendor/nvidia" name="proprietary_vendor_nvidia" remote="drivers" revision="kk4.4" />
   <project path="vendor/broadcom" name="proprietary_vendor_broadcom" remote="drivers" revision="kk4.4" />
@@ -452,5 +448,9 @@
   <project path="system/core" name="android_system_core" remote="minimal" revision="master" />
   <project path="external/skia" name="android_external_skia" remote="minimal" revision="master" />
   <project path="manifest" name="manifest" remote="minimal" revision="master" />
-
+  <project path="prebuilts/gcc/linux-x86/arm/sabermod-arm-linux-androideabi-4.8" name="sm-linaro-4.8" remote="vaz" revision="master" />
+  <project path="art" name="android_art" remote="minimal" revision="master" />
+  <project path="hardware/qcom/camera" name="android_hardware_qcom_camera" remote="minimal" revision="master" />
+  <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="minimal" revision="master" />
+  <project path="external/bluetooth/bluedroid" name="android_external_bluetooth_bluedroid" remote="minimal" revision="master" />
 </manifest>
