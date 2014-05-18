@@ -35,7 +35,7 @@ Iniciar repositorio para descargar el código:
  
 Comenzar la descarga de código:
 
-    repo sync -f
+    repo sync
 
 Por último, para compilar:
 

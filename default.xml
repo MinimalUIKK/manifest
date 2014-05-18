@@ -7,7 +7,7 @@
   <remote name="drivers" fetch="https://github.com/SlimRoms/" />
   <remote name="fix" fetch="https://github.com/DavidVazGuijarro/" />
   <remote  name="github" fetch="git://github.com/" />
-  <default revision="refs/tags/android-4.4.2_r2" remote="aosp" sync-j="12" />
+  <default revision="refs/tags/android-4.4.2_r2" remote="aosp" sync-j="20" />
 
   <project path="build" name="MinimalUI/android_build" remote="github" revision="master" >
     <copyfile src="core/root.mk" dest="Makefile" />
@@ -451,5 +451,6 @@
   <project path="packages/providers/ThemesProvider" name="android_packages_providers_ThemesProvider" remote="cm" revision="cm-11.0" />
   <project path="system/core" name="android_system_core" remote="minimal" revision="master" />
   <project path="external/skia" name="android_external_skia" remote="minimal" revision="master" />
+  <project path="manifest" name="manifest" remote="minimal" revision="master" />
 
 </manifest>
