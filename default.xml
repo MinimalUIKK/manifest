@@ -443,8 +443,8 @@
   <project path="vendor/elan" name="proprietary_vendor_elan" remote="drivers" revision="kk4.4" />
   <project path="vendor/audience" name="proprietary_vendor_audience" remote="drivers" revision="kk4.4" />
   <project path="vendor/akm" name="proprietary_vendor_akm" remote="drivers" revision="kk4.4" />
-  <project path="packages/apps/ThemeChooser" name="android_packages_apps_ThemeChooser" remote="cm" revision="cm-11.0" />
-  <project path="packages/providers/ThemesProvider" name="android_packages_providers_ThemesProvider" remote="cm" revision="cm-11.0" />
+  <project path="packages/apps/ThemeChooser" name="android_packages_apps_ThemeChooser" remote="minimal" revision="cm-11.0" />
+  <project path="packages/providers/ThemesProvider" name="android_packages_providers_ThemesProvider" remote="minimal" revision="cm-11.0" />
   <project path="system/core" name="android_system_core" remote="minimal" revision="master" />
   <project path="external/skia" name="android_external_skia" remote="minimal" revision="master" />
   <project path="manifest" name="manifest" remote="minimal" revision="master" />
