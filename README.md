@@ -12,7 +12,7 @@ Activar ccache:
 
 Configurar ruta de ccache:
 
-export CCACHE_DIR=/home/TU-USUARIO/.ccache
+    export CCACHE_DIR=/home/TU-USUARIO/.ccache
     
 Hacer link de librerías para evitar errores:
 
