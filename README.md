@@ -1,10 +1,18 @@
 Instalar paquetes necesarios para el entorno de compilación:
 
-    sudo apt-get install git gnupg flex bison gperf build-essential \
+    sudo apt-get install git ccache gnupg flex bison gperf build-essential \
     zip curl libc6-dev libncurses5-dev:i386 x11proto-core-dev \
     libx11-dev:i386 libreadline6-dev:i386 libgl1-mesa-glx:i386 \
     libgl1-mesa-dev g++-multilib mingw32 tofrodos schedtool \
     python-markdown libxml2-utils xsltproc zlib1g-dev:i386 dpkg-dev
+
+Activar ccache:
+
+    export USE_CCACHE=1
+
+Configurar ruta de ccache:
+
+export CCACHE_DIR=/home/TU-USUARIO/.ccache
     
 Hacer link de librerías para evitar errores:
 
@@ -36,6 +44,10 @@ Iniciar repositorio para descargar el código:
 Comenzar la descarga de código:
 
     repo sync
+
+Configurar espacio de ccache para acelerar compilación:
+
+    prebuilts/misc/linux-x86/ccache/ccache -M 100G
 
 Por último, para compilar:
 
