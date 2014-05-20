@@ -6,8 +6,9 @@
   <remote name="cm" fetch="https://github.com/CyanogenMod/" />
   <remote name="drivers" fetch="https://github.com/SlimRoms/" />
   <remote name="vaz" fetch="https://github.com/DavidVazGuijarro/" />
+  <remote name="su" fetch="https://github.com/koush/" />
   <remote  name="github" fetch="git://github.com/" />
-  <default revision="refs/tags/android-4.4.2_r2" remote="aosp" sync-j="20" />
+  <default revision="refs/tags/android-4.4.2_r2" remote="aosp" sync-j="12" />
 
   <project path="build" name="MinimalUI/android_build" remote="github" revision="master" >
     <copyfile src="core/root.mk" dest="Makefile" />
@@ -453,4 +454,6 @@
   <project path="hardware/qcom/camera" name="android_hardware_qcom_camera" remote="minimal" revision="master" />
   <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="minimal" revision="master" />
   <project path="external/bluetooth/bluedroid" name="android_external_bluetooth_bluedroid" remote="minimal" revision="master" />
+  <project path="external/koush/Superuser" name="Superuser" remote="su" revision="master" />
+  <project path="external/koush/Widgets" name="Widgets" remote="su" revision="master" />
 </manifest>
