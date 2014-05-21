@@ -456,4 +456,6 @@
   <project path="external/bluetooth/bluedroid" name="android_external_bluetooth_bluedroid" remote="minimal" revision="master" />
   <project path="external/koush/Superuser" name="Superuser" remote="su" revision="master" />
   <project path="external/koush/Widgets" name="Widgets" remote="su" revision="master" />
+  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="minimal" revision="master" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="minimal" revision="master" />
 </manifest>
