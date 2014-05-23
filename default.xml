@@ -406,6 +406,7 @@
   <project path="device/asus/deb" name="android_device_asus_deb" remote="minimal" revision="master" />
   <project path="device/asus/flo" name="android_device_asus_flo" remote="minimal" revision="master" />
   <project path="device/samsung/manta" name="android_device_samsung_manta" remote="minimal" revision="master" />
+  <project path="device/qcom/common" name="android_device_qcom_common" remote="cm" revision="cm-11.0" />
   <project path="vendor/rascarlo" name="android_vendor_minimal" remote="minimal" revision="master" />
   <project path="frameworks/base" name="android_frameworks_base" remote="minimal" revision="master" />
   <project path="frameworks/native" name="android_frameworks_native" remote="minimal" revision="master" />
