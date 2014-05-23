@@ -398,6 +398,11 @@
   <!-- MinimalUI Team Repositories -->
 
   <project path="device/lge/hammerhead" name="android_device_lge_hammerhead" remote="minimal" revision="master" />
+  <project path="device/lge/d800" name="android_device_lge_d800" remote="minimal" revision="master" />
+  <project path="device/lge/d801" name="android_device_lge_d801" remote="minimal" revision="master" />
+  <project path="device/lge/d802" name="android_device_lge_d802" remote="minimal" revision="master" />
+  <project path="device/lge/d803" name="android_device_lge_d803" remote="minimal" revision="master" />
+  <project path="device/lge/g2-common" name="android_device_lge_g2-common" remote="minimal" revision="master" />
   <project path="device/lge/mako" name="android_device_lge_mako" remote="minimal" revision="master" />
   <project path="device/asus/grouper" name="android_device_asus_grouper" remote="minimal" revision="master" />
   <project path="device/asus/tilapia" name="android_device_asus_tilapia" remote="minimal" revision="master" />
