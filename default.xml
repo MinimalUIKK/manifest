@@ -122,7 +122,6 @@
   <project path="external/hyphenation" name="platform/external/hyphenation" />
   <project path="external/icu4c" name="platform/external/icu4c" groups="pdk" />
   <project path="external/iproute2" name="platform/external/iproute2" groups="pdk" />
-  <project path="external/ipsec-tools" name="platform/external/ipsec-tools" />
   <project path="external/iptables" name="platform/external/iptables" />
   <project path="external/iputils" name="platform/external/iputils" />
   <project path="external/jack" name="platform/external/jack" />
@@ -159,7 +158,6 @@
   <project path="external/libxml2" name="platform/external/libxml2" />
   <project path="external/libxslt" name="platform/external/libxslt" />
   <project path="external/libyuv" name="platform/external/libyuv" groups="libyuv" />
-  <project path="external/linux-tools-perf" name="platform/external/linux-tools-perf" />
   <project path="external/littlemock" name="platform/external/littlemock" />
   <project path="external/llvm" name="platform/external/llvm" groups="pdk" />
   <project path="external/lzma" name="platform/external/lzma" />
