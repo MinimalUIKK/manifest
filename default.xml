@@ -10,7 +10,7 @@
   <remote  name="github" fetch="git://github.com/" />
   <default revision="refs/tags/android-4.4.2_r2" remote="aosp" sync-j="12" />
 
-  <project path="build" name="MinimalUI/android_build" remote="github" revision="master" >
+  <project path="build" name="MinimalUI/android_build" remote="github" revision="new" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
