@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote  name="aosp" fetch="https://android.googlesource.com/" />
-  <remote name="minimal" fetch="https://github.com/MinimalUI/" />
-  <remote name="cm" fetch="https://github.com/CyanogenMod/" />
-  <remote name="drivers" fetch="https://github.com/SlimRoms/" />
-  <remote name="vaz" fetch="https://github.com/DavidVazGuijarro/" />
-  <remote name="su" fetch="https://github.com/koush/" />
-  <remote  name="github" fetch="git://github.com/" />
-  <default revision="refs/tags/android-4.4.2_r2" remote="aosp" sync-j="12" />
+  <remote  name="aosp"
+           fetch=".." />
+  <default revision="refs/tags/android-4.4.4_r2.0.1"
+           remote="aosp"
+           sync-j="4" />
 
-  <project path="build" name="MinimalUI/android_build" remote="github" revision="master" >
+  <project path="build" name="platform/build" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
+  <project path="art" name="platform/art" />
   <project path="bionic" name="platform/bionic" groups="pdk" />
   <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" />
   <project path="bootable/diskinstaller" name="platform/bootable/diskinstaller" />
@@ -25,7 +23,11 @@
   <project path="developers/docs" name="platform/developers/docs" />
   <project path="developers/samples/android" name="platform/developers/samples/android" />
   <project path="development" name="platform/development" />
+  <project path="device/asus/deb" name="device/asus/deb" groups="device,flo" />
+  <project path="device/asus/flo" name="device/asus/flo" groups="device,flo" />
   <project path="device/asus/flo-kernel" name="device/asus/flo-kernel" groups="device,flo" />
+  <project path="device/asus/grouper" name="device/asus/grouper" groups="device,grouper" />
+  <project path="device/asus/tilapia" name="device/asus/tilapia" groups="device,grouper" />
   <project path="device/common" name="device/common" />
   <project path="device/generic/armv7-a-neon" name="device/generic/armv7-a-neon" groups="pdk" />
   <project path="device/generic/common" name="device/generic/common" groups="pdk" />
@@ -37,9 +39,12 @@
   <project path="device/generic/x86" name="device/generic/x86" groups="pdk" />
   <project path="device/google/accessory/arduino" name="device/google/accessory/arduino" groups="device" />
   <project path="device/google/accessory/demokit" name="device/google/accessory/demokit" groups="device" />
+  <project path="device/lge/hammerhead" name="device/lge/hammerhead" groups="device,hammerhead" />
   <project path="device/lge/hammerhead-kernel" name="device/lge/hammerhead-kernel" groups="device,hammerhead" />
+  <project path="device/lge/mako" name="device/lge/mako" groups="device,mako" />
   <project path="device/lge/mako-kernel" name="device/lge/mako-kernel" groups="device,mako" />
   <project path="device/sample" name="device/sample" groups="pdk" />
+  <project path="device/samsung/manta" name="device/samsung/manta" groups="device,manta" />
   <project path="docs/source.android.com" name="platform/docs/source.android.com" />
   <project path="external/aac" name="platform/external/aac" groups="pdk" />
   <project path="external/android-clat" name="platform/external/android-clat" />
@@ -53,6 +58,7 @@
   <project path="external/arduino" name="platform/external/arduino" />
   <project path="external/bison" name="platform/external/bison" groups="pdk" />
   <project path="external/blktrace" name="platform/external/blktrace" />
+  <project path="external/bluetooth/bluedroid" name="platform/external/bluetooth/bluedroid" groups="pdk" />
   <project path="external/bouncycastle" name="platform/external/bouncycastle" />
   <project path="external/bsdiff" name="platform/external/bsdiff" groups="pdk" />
   <project path="external/bzip2" name="platform/external/bzip2" groups="pdk" />
@@ -65,7 +71,7 @@
   <project path="external/chromium_org/sdch/open-vcdiff" name="platform/external/chromium_org/sdch/open-vcdiff" />
   <project path="external/chromium_org/testing/gtest" name="platform/external/chromium_org/testing/gtest" />
   <project path="external/chromium_org/third_party/WebKit" name="platform/external/chromium_org/third_party/WebKit" />
-  <project path="external/chromium_org/third_party/angle_dx11" name="platform/external/chromium_org/third_party/angle_dx11" />
+  <project path="external/chromium_org/third_party/angle" name="platform/external/chromium_org/third_party/angle" />
   <project path="external/chromium_org/third_party/eyesfree/src/android/java/src/com/googlecode/eyesfree/braille" name="platform/external/chromium_org/third_party/eyesfree/src/android/java/src/com/googlecode/eyesfree/braille" />
   <project path="external/chromium_org/third_party/freetype" name="platform/external/chromium_org/third_party/freetype" />
   <project path="external/chromium_org/third_party/icu" name="platform/external/chromium_org/third_party/icu" />
@@ -77,6 +83,7 @@
   <project path="external/chromium_org/third_party/openssl" name="platform/external/chromium_org/third_party/openssl" />
   <project path="external/chromium_org/third_party/opus/src" name="platform/external/chromium_org/third_party/opus/src" />
   <project path="external/chromium_org/third_party/ots" name="platform/external/chromium_org/third_party/ots" />
+  <project path="external/chromium_org/third_party/sfntly/cpp/src" name="platform/external/chromium_org/third_party/sfntly/cpp/src" />
   <project path="external/chromium_org/third_party/skia/gyp" name="platform/external/chromium_org/third_party/skia/gyp" />
   <project path="external/chromium_org/third_party/skia/include" name="platform/external/chromium_org/third_party/skia/include" />
   <project path="external/chromium_org/third_party/skia/src" name="platform/external/chromium_org/third_party/skia/src" />
@@ -122,6 +129,7 @@
   <project path="external/hyphenation" name="platform/external/hyphenation" />
   <project path="external/icu4c" name="platform/external/icu4c" groups="pdk" />
   <project path="external/iproute2" name="platform/external/iproute2" groups="pdk" />
+  <project path="external/ipsec-tools" name="platform/external/ipsec-tools" />
   <project path="external/iptables" name="platform/external/iptables" />
   <project path="external/iputils" name="platform/external/iputils" />
   <project path="external/jack" name="platform/external/jack" />
@@ -137,6 +145,7 @@
   <project path="external/junit" name="platform/external/junit" />
   <project path="external/kernel-headers" name="platform/external/kernel-headers" />
   <project path="external/libcap-ng" name="platform/external/libcap-ng" />
+  <project path="external/libexif" name="platform/external/libexif" />
   <project path="external/libffi" name="platform/external/libffi" />
   <project path="external/libgsm" name="platform/external/libgsm" groups="pdk" />
   <project path="external/liblzf" name="platform/external/liblzf" groups="pdk" />
@@ -151,6 +160,7 @@
   <project path="external/libppp" name="platform/external/libppp" />
   <project path="external/libselinux" name="platform/external/libselinux" groups="pdk" />
   <project path="external/libsepol" name="platform/external/libsepol" groups="pdk" />
+  <project path="external/libssh2" name="platform/external/libssh2" />
   <project path="external/libusb" name="platform/external/libusb" />
   <project path="external/libusb-compat" name="platform/external/libusb-compat" />
   <project path="external/libvorbis" name="platform/external/libvorbis" />
@@ -158,6 +168,7 @@
   <project path="external/libxml2" name="platform/external/libxml2" />
   <project path="external/libxslt" name="platform/external/libxslt" />
   <project path="external/libyuv" name="platform/external/libyuv" groups="libyuv" />
+  <project path="external/linux-tools-perf" name="platform/external/linux-tools-perf" />
   <project path="external/littlemock" name="platform/external/littlemock" />
   <project path="external/llvm" name="platform/external/llvm" groups="pdk" />
   <project path="external/lzma" name="platform/external/lzma" />
@@ -200,6 +211,7 @@
   <project path="external/sepolicy" name="platform/external/sepolicy" groups="pdk" />
   <project path="external/sfntly" name="platform/external/sfntly" />
   <project path="external/sil-fonts" name="platform/external/sil-fonts" />
+  <project path="external/skia" name="platform/external/skia" />
   <project path="external/smack" name="platform/external/smack" />
   <project path="external/smali" name="platform/external/smali" />
   <project path="external/sonivox" name="platform/external/sonivox" groups="pdk" />
@@ -229,12 +241,15 @@
   <project path="external/yaffs2" name="platform/external/yaffs2" groups="pdk" />
   <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
   <project path="external/zxing" name="platform/external/zxing" />
+  <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" />
+  <project path="frameworks/base" name="platform/frameworks/base" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
   <project path="frameworks/ex" name="platform/frameworks/ex" />
   <project path="frameworks/mff" name="platform/frameworks/mff" />
   <project path="frameworks/ml" name="platform/frameworks/ml" />
+  <project path="frameworks/native" name="platform/frameworks/native" groups="pdk" />
   <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" />
   <project path="frameworks/opt/carddav" name="platform/frameworks/opt/carddav" />
   <project path="frameworks/opt/colorpicker" name="platform/frameworks/opt/colorpicker" />
@@ -246,11 +261,12 @@
   <project path="frameworks/opt/net/voip" name="platform/frameworks/opt/net/voip" />
   <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" />
   <project path="frameworks/opt/timezonepicker" name="platform/frameworks/opt/timezonepicker" />
+  <project path="frameworks/opt/telephony" name="platform/frameworks/opt/telephony" groups="pdk" />
   <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" />
+  <project path="frameworks/opt/widget" name="platform/frameworks/opt/widget" />
   <project path="frameworks/rs" name="platform/frameworks/rs" groups="pdk" />
   <project path="frameworks/support" name="platform/frameworks/support" />
   <project path="frameworks/testing" name="platform/frameworks/testing" />
-  <project path="frameworks/uiautomator" name="platform/frameworks/uiautomator" />
   <project path="frameworks/volley" name="platform/frameworks/volley" />
   <project path="frameworks/webview" name="platform/frameworks/webview" />
   <project path="frameworks/wilhelm" name="platform/frameworks/wilhelm" />
@@ -262,6 +278,8 @@
   <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="pdk" />
   <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom" />
   <project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" groups="qcom" />
+  <project path="hardware/qcom/camera" name="platform/hardware/qcom/camera" groups="qcom" />
+  <project path="hardware/qcom/display" name="platform/hardware/qcom/display" groups="qcom" />
   <project path="hardware/qcom/keymaster" name="platform/hardware/qcom/keymaster" groups="qcom" />
   <project path="hardware/qcom/media" name="platform/hardware/qcom/media" groups="qcom" />
   <project path="hardware/qcom/msm8960" name="platform/hardware/qcom/msm8960" groups="qcom_msm8960" />
@@ -280,13 +298,28 @@
   <project path="ndk" name="platform/ndk" />
   <project path="packages/apps/BasicSmsReceiver" name="platform/packages/apps/BasicSmsReceiver" />
   <project path="packages/apps/Bluetooth" name="platform/packages/apps/Bluetooth" />
+  <project path="packages/apps/Browser" name="platform/packages/apps/Browser" />
+  <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" />
+  <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" />
+  <project path="packages/apps/Camera" name="platform/packages/apps/Camera" />
+  <project path="packages/apps/Camera2" name="platform/packages/apps/Camera2" />
   <project path="packages/apps/CellBroadcastReceiver" name="platform/packages/apps/CellBroadcastReceiver" />
   <project path="packages/apps/CertInstaller" name="platform/packages/apps/CertInstaller" />
+  <project path="packages/apps/Contacts" name="platform/packages/apps/Contacts" />
+  <project path="packages/apps/ContactsCommon" name="platform/packages/apps/ContactsCommon" />
+  <project path="packages/apps/DeskClock" name="platform/packages/apps/DeskClock" />
+  <project path="packages/apps/Dialer" name="platform/packages/apps/Dialer" />
+  <project path="packages/apps/Email" name="platform/packages/apps/Email" />
+  <project path="packages/apps/Exchange" name="platform/packages/apps/Exchange" />
+  <project path="packages/apps/Gallery" name="platform/packages/apps/Gallery" />
+  <project path="packages/apps/Gallery2" name="platform/packages/apps/Gallery2" />
   <project path="packages/apps/HTMLViewer" name="platform/packages/apps/HTMLViewer" />
   <project path="packages/apps/InCallUI" name="platform/packages/apps/InCallUI" />
   <project path="packages/apps/KeyChain" name="platform/packages/apps/KeyChain" />
   <project path="packages/apps/Launcher2" name="platform/packages/apps/Launcher2" />
+  <project path="packages/apps/Launcher3" name="platform/packages/apps/Launcher3" />
   <project path="packages/apps/LegacyCamera" name="platform/packages/apps/LegacyCamera" />
+  <project path="packages/apps/Mms" name="platform/packages/apps/Mms" />
   <project path="packages/apps/Music" name="platform/packages/apps/Music" />
   <project path="packages/apps/MusicFX" name="platform/packages/apps/MusicFX" />
   <project path="packages/apps/Nfc" name="platform/packages/apps/Nfc" />
@@ -297,6 +330,7 @@
   <project path="packages/apps/Protips" name="platform/packages/apps/Protips" />
   <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
   <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" />
+  <project path="packages/apps/Settings" name="platform/packages/apps/Settings" />
   <project path="packages/apps/SmartCardService" name="platform/packages/apps/SmartCardService" />
   <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" />
   <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" />
@@ -307,18 +341,21 @@
   <project path="packages/apps/VideoEditor" name="platform/packages/apps/VideoEditor" />
   <project path="packages/apps/VoiceDialer" name="platform/packages/apps/VoiceDialer" />
   <project path="packages/experimental" name="platform/packages/experimental" />
+  <project path="packages/inputmethods/LatinIME" name="platform/packages/inputmethods/LatinIME" />
   <project path="packages/inputmethods/OpenWnn" name="platform/packages/inputmethods/OpenWnn" />
   <project path="packages/inputmethods/PinyinIME" name="platform/packages/inputmethods/PinyinIME" />
   <project path="packages/providers/ApplicationsProvider" name="platform/packages/providers/ApplicationsProvider" />
   <project path="packages/providers/CalendarProvider" name="platform/packages/providers/CalendarProvider" />
   <project path="packages/providers/ContactsProvider" name="platform/packages/providers/ContactsProvider" />
   <project path="packages/providers/DownloadProvider" name="platform/packages/providers/DownloadProvider" />
+  <project path="packages/providers/MediaProvider" name="platform/packages/providers/MediaProvider" />
   <project path="packages/providers/PartnerBookmarksProvider" name="platform/packages/providers/PartnerBookmarksProvider" />
   <project path="packages/providers/TelephonyProvider" name="platform/packages/providers/TelephonyProvider" />
   <project path="packages/providers/UserDictionaryProvider" name="platform/packages/providers/UserDictionaryProvider" />
   <project path="packages/screensavers/Basic" name="platform/packages/screensavers/Basic" />
   <project path="packages/screensavers/PhotoTable" name="platform/packages/screensavers/PhotoTable" />
   <project path="packages/screensavers/WebView" name="platform/packages/screensavers/WebView" />
+  <project path="packages/services/Telephony" name="platform/packages/services/Telephony" />
   <project path="packages/wallpapers/Basic" name="platform/packages/wallpapers/Basic" />
   <project path="packages/wallpapers/Galaxy4" name="platform/packages/wallpapers/Galaxy4" />
   <project path="packages/wallpapers/HoloSpiral" name="platform/packages/wallpapers/HoloSpiral" />
@@ -367,6 +404,8 @@
   <project path="prebuilts/gcc/linux-x86/x86/i686-linux-android-4.6" name="platform/prebuilts/gcc/linux-x86/x86/i686-linux-android-4.6" groups="pdk,linux,x86" />
   <project path="prebuilts/gcc/linux-x86/x86/i686-linux-android-4.7" name="platform/prebuilts/gcc/linux-x86/x86/i686-linux-android-4.7" groups="pdk,linux,x86" />
   <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.7" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.7" groups="pdk,linux,x86" />
+  <project path="prebuilts/gradle-plugin" name="platform/prebuilts/gradle-plugin" />
+  <project path="prebuilts/maven_repo/android" name="platform/prebuilts/maven_repo/android" />
   <project path="prebuilts/misc" name="platform/prebuilts/misc" groups="pdk" />
   <project path="prebuilts/ndk" name="platform/prebuilts/ndk" groups="pdk" />
   <project path="prebuilts/python/darwin-x86/2.7.5" name="platform/prebuilts/python/darwin-x86/2.7.5" groups="darwin" />
@@ -376,6 +415,7 @@
   <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk" />
   <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="platform/sdk" />
+  <project path="system/core" name="platform/system/core" groups="pdk" />
   <project path="system/extras" name="platform/system/extras" groups="pdk" />
   <project path="system/media" name="platform/system/media" groups="pdk" />
   <project path="system/netd" name="platform/system/netd" groups="pdk" />
@@ -393,71 +433,4 @@
   <project path="tools/studio/cloud" name="platform/tools/studio/cloud" groups="notdefault,tools" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
 
-  <!-- MinimalUI Team Repositories -->
-
-  <project path="device/lge/hammerhead" name="android_device_lge_hammerhead" remote="minimal" revision="master" />
-  <project path="device/lge/d802" name="android_device_lge_d802" remote="minimal" revision="master" />
-  <project path="device/lge/g2-common" name="android_device_lge_g2-common" remote="minimal" revision="master" />
-  <project path="device/lge/mako" name="android_device_lge_mako" remote="minimal" revision="master" />
-  <project path="device/asus/grouper" name="android_device_asus_grouper" remote="minimal" revision="master" />
-  <project path="device/asus/tilapia" name="android_device_asus_tilapia" remote="minimal" revision="master" />
-  <project path="device/asus/deb" name="android_device_asus_deb" remote="minimal" revision="master" />
-  <project path="device/asus/flo" name="android_device_asus_flo" remote="minimal" revision="master" />
-  <project path="device/samsung/manta" name="android_device_samsung_manta" remote="minimal" revision="master" />
-  <project path="device/qcom/common" name="android_device_qcom_common" remote="cm" revision="cm-11.0" />
-  <project path="external/linux-tools-perf" name="android_external_linux-tools-perf" remote="cm" revision="cm-11.0" />
-  <project path="external/ipsec-tools" name="android_external_ipsec-tools" remote="cm" revision="cm-11.0" />
-  <project path="external/f2fs-tools" name="android_external_f2fs-tools" remote="cm" revision="cm-11.0" />
-  <project path="vendor/rascarlo" name="android_vendor_minimal" remote="minimal" revision="master" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="minimal" revision="master" />
-  <project path="frameworks/native" name="android_frameworks_native" remote="minimal" revision="master" />
-  <project path="frameworks/av" name="android_frameworks_av" remote="minimal" revision="master" />
-  <project path="packages/apps/Browser" name="android_packages_apps_Browser" remote="minimal" revision="master" />
-  <project path="packages/apps/Calculator" name="android_packages_apps_Calculator" remote="minimal" revision="master" />
-  <project path="packages/apps/DeskClock" name="android_packages_apps_DeskClock" remote="minimal" revision="master" />
-  <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="minimal" revision="master" />
-  <project path="packages/apps/Email" name="android_packages_apps_Email" remote="minimal" revision="master" />
-  <project path="packages/apps/Exchange" name="android_packages_apps_Exchange" remote="minimal" revision="master" />
-  <project path="packages/apps/Mms" name="android_packages_apps_Mms" remote="minimal" revision="master" />
-  <project path="packages/apps/Contacts" name="android_packages_apps_Contacts" remote="minimal" revision="master" />
-  <project path="packages/apps/ContactsCommon" name="android_packages_apps_ContactsCommon" remote="minimal" revision="master" />
-  <project path="packages/apps/Gallery2" name="android_packages_apps_Gallery2" remote="minimal" revision="master" />
-  <project path="packages/apps/Gallery" name="android_packages_apps_Gallery" remote="minimal" revision="master" />
-  <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="minimal" revision="master" />
-  <project path="packages/apps/Camera" name="android_packages_apps_Camera" remote="minimal" revision="master" />
-  <project path="packages/apps/Dialer" name="android_packages_apps_Dialer" remote="minimal" revision="master" />
-  <project path="packages/apps/Calendar" name="android_packages_apps_Calendar" remote="minimal" revision="master" />
-  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="minimal" revision="master" />
-  <project path="packages/providers/MediaProvider" name="android_packages_providers_MediaProvider" remote="minimal" revision="master" />
-  <project path="packages/inputmethods/LatinIME" name="android_packages_inputmethods_LatinIME" remote="minimal" revision="master" />
-  <project path="vendor/google" name="android_vendor_google" remote="minimal" revision="master" />
-  <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="drivers" revision="kk4.4" />
-  <project path="vendor/lge" name="proprietary_vendor_lge" remote="drivers" revision="kk4.4" />
-  <project path="vendor/htc" name="proprietary_vendor_htc" remote="drivers" revision="kk4.4" />
-  <project path="vendor/sony" name="proprietary_vendor_sony" remote="drivers" revision="kk4.4" />
-  <project path="vendor/asus" name="proprietary_vendor_asus" remote="drivers" revision="kk4.4" />
-  <project path="vendor/widevine" name="proprietary_vendor_widevine" remote="drivers" revision="kk4.4" />
-  <project path="vendor/qcom" name="proprietary_vendor_qcom" remote="vaz" revision="kk4.4" />
-  <project path="vendor/invensense" name="proprietary_vendor_invensense" remote="drivers" revision="kk4.4" />
-  <project path="vendor/nvidia" name="proprietary_vendor_nvidia" remote="drivers" revision="kk4.4" />
-  <project path="vendor/broadcom" name="proprietary_vendor_broadcom" remote="drivers" revision="kk4.4" />
-  <project path="vendor/nxp" name="proprietary_vendor_nxp" remote="drivers" revision="kk4.4" />
-  <project path="vendor/imgtec" name="proprietary_vendor_imgtec" remote="drivers" revision="kk4.4" />
-  <project path="vendor/elan" name="proprietary_vendor_elan" remote="drivers" revision="kk4.4" />
-  <project path="vendor/audience" name="proprietary_vendor_audience" remote="drivers" revision="kk4.4" />
-  <project path="vendor/akm" name="proprietary_vendor_akm" remote="drivers" revision="kk4.4" />
-  <project path="packages/apps/ThemeChooser" name="android_packages_apps_ThemeChooser" remote="minimal" revision="cm-11.0" />
-  <project path="packages/providers/ThemesProvider" name="android_packages_providers_ThemesProvider" remote="minimal" revision="cm-11.0" />
-  <project path="system/core" name="android_system_core" remote="minimal" revision="master" />
-  <project path="external/skia" name="android_external_skia" remote="minimal" revision="master" />
-  <project path="manifest" name="manifest" remote="minimal" revision="master" />
-  <project path="prebuilts/gcc/linux-x86/arm/sabermod-arm-linux-androideabi-4.8" name="sm-linaro-4.8" remote="vaz" revision="master" />
-  <project path="art" name="android_art" remote="minimal" revision="master" />
-  <project path="hardware/qcom/camera" name="android_hardware_qcom_camera" remote="minimal" revision="master" />
-  <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="minimal" revision="master" />
-  <project path="external/bluetooth/bluedroid" name="android_external_bluetooth_bluedroid" remote="minimal" revision="master" />
-  <project path="external/koush/Superuser" name="Superuser" remote="su" revision="master" />
-  <project path="external/koush/Widgets" name="Widgets" remote="su" revision="master" />
-  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="minimal" revision="master" />
-  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="minimal" revision="master" />
 </manifest>
