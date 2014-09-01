@@ -439,6 +439,6 @@
   <project path="manifest" name="manifest" remote="minimal" revision="master" />
   <project path="packages/inputmethods/LatinIME" name="android_packages_inputmethods_LatinIME" remote="minimal" revision="master" />
   <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="minimal" revision="master" />
-  <project path="packages/apps/Launcher3" name"=android_packages_apps_Launcher3" remote="minimal" revision="master" />
-
+  <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="minimal" revision="master" />
+  
 </manifest>
