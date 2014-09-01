@@ -44,31 +44,3 @@ Iniciar repositorio para descargar el código:
 Comenzar la descarga de código:
 
     repo sync
-
-Configurar espacio de ccache para acelerar compilación:
-
-    prebuilts/misc/linux-x86/ccache/ccache -M 100G
-
-Por último, para compilar:
-
-*Nexus 5 - hammerhead:
-
-    source build/hammerhead.sh
-
-*Nexus 4 - mako:
-
-    source build/mako.sh
-
-*Nexus 7 - tilapia:
-
-    source build/tilapia.sh
-
-*Nexus 7 - grouper:
-
-    source build/grouper.sh
-
-*Nexus 10 - manta:
-
-    source build/manta.sh
-
-*Más dispositivos disponibles para compilar en un futuro cercano
